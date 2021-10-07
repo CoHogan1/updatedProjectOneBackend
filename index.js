@@ -46,7 +46,7 @@ const corsOptions = {
             // -1 outside the array
             callback(null, true)
         } else {
-            callback(new Error('Not allowed by CORS + origin'))
+            callback(new Error('Not allowed by CORS ', origin))
         }
     }
 }
