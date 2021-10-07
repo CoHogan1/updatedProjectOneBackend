@@ -6,7 +6,6 @@ const session = require('sessions')
 const eSession = require('express-sessions')
 const methodOverride = require('method-override')
 const cors = require('cors')
-//const systemController = require() // do I need this?
 
 // Database
 const mongoURI = process.env.MONGODB // || 'mongodb://127.0.0.1:27017/' + "projectOneUpdated"
@@ -47,7 +46,7 @@ const corsOptions = {
             // -1 outside the array
             callback(null, true)
         } else {
-            callback(new Error('Not allowed by CORS'))
+            callback(new Error('Not allowed by CORS + origin'))
         }
     }
 }
@@ -59,7 +58,6 @@ app.get('/home', (req, res)=>{
 })
 
 app.get('/', (req, res)=>{
-    console.log('here')
     res.send('working')
 })
 
