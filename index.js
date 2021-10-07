@@ -40,7 +40,7 @@ db.on('connected', ()=> console.log('Mongo connected'))
 db.on('disconnected', ()=> console.log('Mongo is now Disconnected, Have a good day!'))
 
 // cors handeling.
-const whitelist = ['http://localhost:3000','http://localhost:3001' ]// all strings.
+const whitelist = ['http://localhost:3000','http://localhost:3001','https://git.heroku.com/updatedprojectonebackend.git', 'https://git.heroku.com/updatedprojectonefrontend.git' ]// all strings.
 const corsOptions = {
     origin: (origin, callback) => {
         if (whitelist.indexOf(origin) !== -1) {
