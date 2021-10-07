@@ -9,7 +9,7 @@ const cors = require('cors')
 //const systemController = require() // do I need this?
 
 // Database
-const mongoURI = process.env.MONGODB || 'mongodb://127.0.0.1:27017/' + "projectOneUpdated"
+const mongoURI = process.env.MONGODB // || 'mongodb://127.0.0.1:27017/' + "projectOneUpdated"
 const db = mongoose.connection
 
 // react front end port will run on port 3000
@@ -40,7 +40,7 @@ db.on('connected', ()=> console.log('Mongo connected'))
 db.on('disconnected', ()=> console.log('Mongo is now Disconnected, Have a good day!'))
 
 // cors handeling.
-const whitelist = ['http://localhost:3000','http://localhost:3001','https://git.heroku.com/updatedprojectonebackend.git', 'https://git.heroku.com/updatedprojectonefrontend.git' ]// all strings.
+const whitelist = ['http://localhost:3000','http://localhost:3001','https://updatedprojectonebackend.herokuapp.com','https://updatedprojectonefrontend.herokuapp.com']// all strings.
 const corsOptions = {
     origin: (origin, callback) => {
         if (whitelist.indexOf(origin) !== -1) {
