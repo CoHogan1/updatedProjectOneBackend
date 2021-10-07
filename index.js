@@ -13,7 +13,7 @@ const mongoURI = process.env.MONGODB || 'mongodb://127.0.0.1:27017/' + "projectO
 const db = mongoose.connection
 
 // react front end port will run on port 3000
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 
 
 // app :)
